@@ -33,7 +33,7 @@ GearShifter = car.CarState.GearShifter
 EventName = car.CarEvent.EventName
 
 MAX_CTRL_SPEED = (V_CRUISE_MAX + 4) * CV.KPH_TO_MS
-ACCEL_MAX = 2.0
+ACCEL_MAX = 3.0
 ACCEL_MIN = -3.5
 FRICTION_THRESHOLD = 0.3
 
@@ -381,8 +381,8 @@ class CarInterfaceBase(ABC):
     ret.longitudinalTuning.kiBP = [0.]
     ret.longitudinalTuning.kiV = [0.]
     # TODO estimate car specific lag, use .15s for now
-    ret.longitudinalActuatorDelay = 0.15
-    ret.steerLimitTimer = 1.0
+    ret.longitudinalActuatorDelay = 0.0
+    ret.steerLimitTimer = 3.0
     return ret
 
   @staticmethod
