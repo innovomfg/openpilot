@@ -14,8 +14,8 @@ Ecu = CarParams.Ecu
 
 
 class CarControllerParams:
-  ACCEL_MIN = -2.0 # m/s
-  ACCEL_MAX = 3.5 # m/s
+  ACCEL_MIN = -4.0 # m/s
+  ACCEL_MAX = 4.0 # m/s
 
   def __init__(self, CP):
     self.STEER_DELTA_UP = 3
@@ -340,7 +340,7 @@ class CAR(Platforms):
       HyundaiCarDocs("Hyundai Palisade 2020-22", "All", video="https://youtu.be/TAnDqjF4fDY?t=456", car_parts=CarParts.common([CarHarness.hyundai_h])),
       HyundaiCarDocs("Kia Telluride 2020-22", "All", car_parts=CarParts.common([CarHarness.hyundai_h])),
     ],
-    CarSpecs(mass=23132, wheelbase=2.9, steerRatio=15.6 * 1.73, tireStiffnessFactor=0.83),
+    CarSpecs(mass=23132, wheelbase=2.9, steerRatio=17.6 * 1.15, tireStiffnessFactor=0.83),
     flags=HyundaiFlags.MANDO_RADAR | HyundaiFlags.CHECKSUM_CRC8,
   )
   HYUNDAI_VELOSTER = HyundaiPlatformConfig(
